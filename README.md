@@ -1,0 +1,3 @@
+# DownloadWebPage
+
+Aplicativo para teste de download de paginas web que não possuam recursos externos, como links para outras pagins ou sites, os demias recursos serão baixados normalmente tias como imagens, css, javascripts, fonts, etc ...

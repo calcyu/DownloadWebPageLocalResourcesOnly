@@ -80,7 +80,7 @@ public class MainUI {
 
 		frmDownloadDePginas = new JFrame();
 		frmDownloadDePginas.setMinimumSize(new Dimension(600, 300));
-		frmDownloadDePginas.setTitle("Download de páginas WEB");
+		frmDownloadDePginas.setTitle("下载WEB页面");
 		frmDownloadDePginas.setBounds(100, 100, 832, 385);
 		frmDownloadDePginas.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -97,11 +97,11 @@ public class MainUI {
 		panel_1.setBorder(new LineBorder(Color.LIGHT_GRAY, 1, true));
 		panel_2.add(panel_1, BorderLayout.NORTH);
 
-		JLabel lblDiertrioDeDownload = new JLabel("Diertório de download:");
+		JLabel lblDiertrioDeDownload = new JLabel("下载目录：");
 
 		lblDownloadDir = new JLabel(downloadDir.getAbsolutePath());
 
-		btnChange = new JButton("Trocar");
+		btnChange = new JButton("选择");
 		btnChange.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				selectDirectory();
@@ -117,7 +117,7 @@ public class MainUI {
 		panel_1.add(panel_6, BorderLayout.SOUTH);
 		panel_6.setLayout(new BorderLayout(0, 0));
 
-		chkDeleteDir = new JCheckBox("Apagar diretório antes do dowload");
+		chkDeleteDir = new JCheckBox("下载前删除目录");
 		chkDeleteDir.setHorizontalAlignment(SwingConstants.LEFT);
 		chkDeleteDir.setHorizontalTextPosition(SwingConstants.LEFT);
 		panel_6.add(chkDeleteDir, BorderLayout.EAST);
@@ -130,12 +130,12 @@ public class MainUI {
 		JLabel lblLinkHttp = new JLabel("Link HTTP");
 		panel_3.add(lblLinkHttp, BorderLayout.WEST);
 
-		httpTextField = new JTextField();
+		httpTextField = new JTextField("http://baidu.com");
 		httpTextField.setToolTipText("http://...");
 		panel_3.add(httpTextField, BorderLayout.CENTER);
 		httpTextField.setColumns(10);
 
-		btnDownload = new JButton("Download");
+		btnDownload = new JButton("开始下载");
 		btnDownload.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				downloadWebPage();
@@ -148,7 +148,7 @@ public class MainUI {
 		panel_3.add(panel_5, BorderLayout.SOUTH);
 		panel_5.setLayout(new BorderLayout(0, 0));
 
-		chkOpenBrowser = new JCheckBox("Abrir navegador ao terminar  download");
+		chkOpenBrowser = new JCheckBox("完成下载后打开浏览器");
 		chkOpenBrowser.setHorizontalTextPosition(SwingConstants.LEFT);
 		chkOpenBrowser.setHorizontalAlignment(SwingConstants.LEFT);
 		panel_5.add(chkOpenBrowser, BorderLayout.EAST);
@@ -174,7 +174,7 @@ public class MainUI {
 	public void selectDirectory() {
 		final JFileChooser jFileChooser = new JFileChooser();
 		jFileChooser.setCurrentDirectory(downloadDir);
-		jFileChooser.setDialogTitle("Escolha um diretório de download");
+		jFileChooser.setDialogTitle("选择下载目录");
 		jFileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 		jFileChooser.setAcceptAllFileFilterUsed(false);
 

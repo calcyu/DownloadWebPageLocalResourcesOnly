@@ -130,7 +130,7 @@ public class MainUI {
 		JLabel lblLinkHttp = new JLabel("Link HTTP");
 		panel_3.add(lblLinkHttp, BorderLayout.WEST);
 
-		httpTextField = new JTextField("http://baidu.com");
+		httpTextField = new JTextField("https://www.baidu.com");
 		httpTextField.setToolTipText("http://...");
 		panel_3.add(httpTextField, BorderLayout.CENTER);
 		httpTextField.setColumns(10);
